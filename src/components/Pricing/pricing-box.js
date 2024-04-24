@@ -17,14 +17,15 @@ class PricingBox extends Component {
                                     <h6>${pricing.price}<span>/{pricing.duration}</span></h6>
                                 </div>
                                 <div className="plan-features mt-4 mb-4">
-                                    <p>Bandwidth: {pricing.features.bandwith}</p>
+                                    {/* <p>Bandwidth: {pricing.features.bandwith}</p>
                                     <p>Onlinespace: {pricing.features.onlinespace}</p>
-                                    <p>Support: {pricing.features.support}</p>
-                                    <p>{pricing.features.domain}</p>
+                                    <p>Support: {pricing.features.support}</p> */}
+                                    <p>{pricing.features.description}</p>
+                                    {/* <p>{pricing.features.domain}</p> */}
                                     <p className="mb-0">{pricing.features.hiddenFees}</p>
                                 </div>
                                 <div className="mb-4">
-                                    <a target="_blank" href={pricing.features.link} className="btn btn-custom">View Demo</a>
+                                    <a target="_blank" href={pricing.features.link} className="btn btn-custom btn-rounded">View Demo</a>
                                 </div>
                             </div>
                         </Col>

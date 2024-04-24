@@ -490,6 +490,11 @@ span.title-border {
   font-family: "Roboto", sans-serif;
 }
 
+.review-img  {
+  max-height: 50px;
+  max-width: 50px;
+  border: 2px solid #615fe6;
+}
 .client-images img {
   max-height: 30px;
   width: auto !important;
@@ -811,3 +816,4 @@ ul.pattern .color6 {
     display: none;
   }
 }
+html{scroll-behavior:smooth}

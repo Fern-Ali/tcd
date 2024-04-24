@@ -9,10 +9,10 @@ class GetStarted extends Component {
           <Container>
             <Row>
               <Col md="9" className="text-white critarea-desc mt-3 mb-3">
-                Become a part of the Vero Optimal community today!
+                Become a part of the Treasure Coast Digital community today!
               </Col>
               <Col md="3" className="mt-3 mb-3 text-md-right">
-                <a href="#home" className="btn btn-outline-custom">
+                <a href="#pricing" className="btn btn-outline-custom">
                   Get Started
                 </a>
               </Col>

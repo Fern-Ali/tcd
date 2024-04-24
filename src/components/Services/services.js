@@ -26,7 +26,7 @@ class Services extends Component {
             <React.Fragment>
         <section id="service" className="section">
             <Container>
-            <SectionTitle title1="Services at" title2="Vero Optimal" />
+            <SectionTitle title1="Services at" title2="Treasure Coast Digital" />
                 <Row className="pt-4 mt-4">
                 <ServiceBox services={this.state.services} />
                 </Row>

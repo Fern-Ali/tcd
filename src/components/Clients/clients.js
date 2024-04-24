@@ -17,7 +17,7 @@ import img4 from "../../assets/images/clients/4.png";
 import img5 from "../../assets/images/clients/5.png";
 import img6 from "../../assets/images/clients/6.png";
 import img7 from "../../assets/images/clients/7.png";
-import user from "../../assets/images/clients/user-1.png";
+import user from "../../assets/images/clients/client-1.jpg";
 
 class Clients extends Component {
   state = {
@@ -57,7 +57,7 @@ class Clients extends Component {
       <React.Fragment>
         <section className="section bg-light" id="client">
           <Container>
-            <SectionTitle title1="Our" title2="Client" />
+            <SectionTitle title1="Our" title2="Reviews" />
             <Row className="mt-4 pt-4 justify-content-center">
               <Col lg="4" md="4">
                 <div className="testimonial-box text-center">
@@ -66,20 +66,19 @@ class Clients extends Component {
                   </h1>
                   <h4>
                     {" "}
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less.
+                    TCDigital took our online presence to a new level. 
+                    We were able to move our entire inventory online and maximize profits with a streamlined ecommerce platform designed at TCD.
+                    Thank you TCD!!
                   </h4>
                   <div className="mt-3 mb-3">
                     <img
                       src={user}
-                      className="mx-auto d-block rounded-circle img-fluid"
+                      className="mx-auto d-block rounded-circle img-fluid review-img"
                       alt="testimonials-user"
                     />
                   </div>
                   <p className="text-muted testi-work mb-1">
-                    - Landing page User
+                    - Rumana, Qatan llc
                   </p>
                   <p className="text-muted">
                     <span className="mdi mdi-star text-warning mr-1"></span>
@@ -90,7 +89,7 @@ class Clients extends Component {
                   </p>
                 </div>
               </Col>
-              <Col lg="4" md="4">
+              {/* <Col lg="4" md="4">
                 <div className="testimonial-box text-center">
                   <h1>
                     <i className="mdi mdi-format-quote-open text-muted"></i>
@@ -151,7 +150,7 @@ class Clients extends Component {
                     <span className="mdi mdi-star text-warning mr-1"></span>
                   </p>
                 </div>
-              </Col>
+              </Col> */}
             </Row>
 
             <Row className="pt-4 mt-4">

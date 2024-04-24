@@ -35,7 +35,12 @@ class Section extends Component {
                                         {/* <p className="pt-4 home-sub-title text-white mx-auto">We help small businesses and startups thrive in the digital world.</p> */}
                                         <p className="pt-4 home-sub-title text-white mx-auto">From improving your search engine visibility to developing a stunning website, we've got you covered.</p>
                                         <div className="watch-video pt-4">
-                                            <Link to="#" onClick={this.callModal} className="video-play-icon text-white"><i className="mdi mdi-play play-icon-circle play play-iconbar"></i> <span>Watch The Video!</span></Link>
+                                            {/* <Link to="#" onClick={this.callModal} className="video-play-icon text-white">
+                                                <i className="mdi mdi-play play-icon-circle play play-iconbar"></i> <span>Watch The Video!</span>
+                                            </Link> */}
+                                            <a href="#features" className="btn btn-custom btn-rounded">
+                                                Get Started
+                                            </a>
                                         </div>
                                     </Col>
                                 </Row>

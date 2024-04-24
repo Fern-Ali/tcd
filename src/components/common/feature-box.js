@@ -10,7 +10,7 @@ class FeatureBox extends Component {
                                     <div className="features-border mx-auto mt-3"></div>
                                     <p className="text-muted mt-3">{this.props.desc}</p>
                                     {/* <Link to={this.props.link} className="">Read more<i className="mdi mdi-chevron-right"></i></Link> */}
-                                    <a href={"#" + this.props.link} className=""> {this.props.text}<i className="mdi mdi-chevron-right"></i></a>
+                                    <a href={"#" + this.props.link} className="btn btn-custom btn-rounded"> {this.props.text}<i className="mdi mdi-chevron-right"></i></a>
                                 </div>
            </React.Fragment>
         );
