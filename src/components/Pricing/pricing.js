@@ -10,7 +10,7 @@ import PricingBox from './pricing-box';
 class Pricing extends Component {
     state = {
         pricings : [
-            { id : 1, title : "Economy", price : 550, duration : "",
+            { id : 1, title : "Economy", price : "1.3k", duration : "",
                 features : 
                     { bandwith : "1GB", onlinespace : "50MB", support : "No", domain : "-", hiddenFees : "*No Hidden Fees", 
                     link: "https://html.dynamiclayers.net/dl/xoom/templates/demo-2/image/index.html",
