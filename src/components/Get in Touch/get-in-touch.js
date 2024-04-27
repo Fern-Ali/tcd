@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Container, Row, Col, FormGroup, Label } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 import { Animated } from "react-animated-css";
-
+import emailjs from '@emailjs/browser'; 
 //Import Section Title
 import SectionTitle from "../common/section-title";
 
 class GetInTouch extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -15,21 +16,30 @@ class GetInTouch extends Component {
       subject: "",
       comments: "",
       msgSendSuccess: false,
+      ejs: emailjs.init("O27hhUQbwyW8bPKr1")
     };
   }
-
+  //useEffect(() => emailjs.init("YOUR-PUBLIC-KEY-HERE"), []);
   handleSubmit = () => {
-    let emailPattern = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
-
+    //let emailPattern = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/);
+    
     if (
       this.state.firstname !== "" &&
       this.state.email !== "" &&
-      emailPattern.test(this.state.email) &&
+      //emailPattern.test(this.state.email) &&
       this.state.subject !== "" &&
       this.state.comments !== ""
     ) {
-      this.setState({ msgSendSuccess: true });
-      this.myFormRef.reset();
+      emailjs.sendForm('service_gwhzyec', 'template_ndgeipp', "#contact-form", 'O27hhUQbwyW8bPKr1')
+      .then((result) => {
+        console.log(result)
+        this.setState({ msgSendSuccess: true });
+        this.myFormRef.reset();
+      }, (error) => {
+        console.log(error)
+        this.setState({ msgSendSuccess: false });
+      });
+      
 
       setTimeout(() => {
         this.setState({ msgSendSuccess: false });
@@ -44,7 +54,7 @@ class GetInTouch extends Component {
     this.setState({ [name]: value });
   };
 
-  render() {
+  render() {    
     return (
       <React.Fragment>
         <section className="section " id="contact">
@@ -153,6 +163,7 @@ class GetInTouch extends Component {
                       name="send"
                       className="submitBnt btn btn-primary btn-custom"
                       value="Send Message"
+                      onSubmit={() => this.handleSubmit()}
                     />
                     <div id="simple-msg"></div>
                   </Col>
